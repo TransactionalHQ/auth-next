@@ -1,5 +1,5 @@
 {
-  "name": "transactional-auth-next",
+  "name": "@usetransactional/auth-next",
   "version": "0.1.0",
   "description": "Next.js SDK for Transactional Auth - OpenID Connect authentication for Next.js applications",
   "main": "dist/index.js",
@@ -56,11 +56,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/TransactionalHQ/transactional-auth-next"
+    "url": "https://github.com/TransactionalHQ/auth-next.git"
   },
-  "homepage": "https://github.com/TransactionalHQ/transactional-auth-next#readme",
+  "homepage": "https://github.com/TransactionalHQ/auth-next#readme",
   "bugs": {
-    "url": "https://github.com/TransactionalHQ/transactional-auth-next/issues"
+    "url": "https://github.com/TransactionalHQ/auth-next/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "peerDependencies": {
     "next": "^13.0.0 || ^14.0.0 || ^15.0.0",
