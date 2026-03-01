@@ -7,7 +7,7 @@
  * ## Installation
  *
  * ```bash
- * npm install transactional-auth-next
+ * npm install @usetransactional/auth-next
  * ```
  *
  * ## Quick Start
@@ -25,7 +25,7 @@
  *
  * ```ts
  * // app/api/auth/[...auth]/route.ts
- * import { handleLogin, handleCallback, handleLogout, handleSession } from 'transactional-auth-next/server';
+ * import { handleLogin, handleCallback, handleLogout, handleSession } from '@usetransactional/auth-next/server';
  *
  * export const GET = async (request, { params }) => {
  *   const route = params.auth[0];
@@ -43,7 +43,7 @@
  *
  * ```tsx
  * // app/layout.tsx
- * import { TransactionalAuthProvider } from 'transactional-auth-next/client';
+ * import { TransactionalAuthProvider } from '@usetransactional/auth-next/client';
  *
  * export default function RootLayout({ children }) {
  *   return (
@@ -62,7 +62,7 @@
  *
  * Server Component:
  * ```tsx
- * import { getSession } from 'transactional-auth-next/server';
+ * import { getSession } from '@usetransactional/auth-next/server';
  *
  * export default async function Page() {
  *   const session = await getSession();
@@ -73,7 +73,7 @@
  * Client Component:
  * ```tsx
  * 'use client';
- * import { useAuth } from 'transactional-auth-next/client';
+ * import { useAuth } from '@usetransactional/auth-next/client';
  *
  * export function LoginButton() {
  *   const { user, login, logout } = useAuth();

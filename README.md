@@ -1,15 +1,15 @@
-# transactional-auth-next
+# @usetransactional/auth-next
 
 Next.js SDK for Transactional Auth - OpenID Connect authentication with full support for App Router, Server Components, and Middleware.
 
 ## Installation
 
 ```bash
-npm install transactional-auth-next
+npm install @usetransactional/auth-next
 # or
-yarn add transactional-auth-next
+yarn add @usetransactional/auth-next
 # or
-pnpm add transactional-auth-next
+pnpm add @usetransactional/auth-next
 ```
 
 ## Quick Start
@@ -34,7 +34,7 @@ import {
   handleCallback,
   handleLogout,
   handleSession,
-} from 'transactional-auth-next/server';
+} from '@usetransactional/auth-next/server';
 import { NextRequest } from 'next/server';
 
 export async function GET(
@@ -62,7 +62,7 @@ export async function GET(
 
 ```tsx
 // app/layout.tsx
-import { TransactionalAuthProvider } from 'transactional-auth-next/client';
+import { TransactionalAuthProvider } from '@usetransactional/auth-next/client';
 
 export default function RootLayout({
   children,
@@ -85,7 +85,7 @@ export default function RootLayout({
 
 ```tsx
 // app/page.tsx
-import { getSession, getUser } from 'transactional-auth-next/server';
+import { getSession, getUser } from '@usetransactional/auth-next/server';
 
 export default async function Page() {
   const session = await getSession();
@@ -109,7 +109,7 @@ export default async function Page() {
 // components/login-button.tsx
 'use client';
 
-import { useAuth } from 'transactional-auth-next/client';
+import { useAuth } from '@usetransactional/auth-next/client';
 
 export function LoginButton() {
   const { user, isLoading, login, logout } = useAuth();
@@ -135,7 +135,7 @@ export function LoginButton() {
 
 ```ts
 // middleware.ts
-import { createAuthMiddleware } from 'transactional-auth-next/middleware';
+import { createAuthMiddleware } from '@usetransactional/auth-next/middleware';
 
 export default createAuthMiddleware({
   protectedPaths: ['/dashboard/*', '/settings/*', '/api/protected/*'],
@@ -151,7 +151,7 @@ export const config = {
 
 ```ts
 // app/api/protected/route.ts
-import { withAuth } from 'transactional-auth-next/middleware';
+import { withAuth } from '@usetransactional/auth-next/middleware';
 import { NextRequest } from 'next/server';
 
 export const GET = withAuth(async (request, session) => {
@@ -164,7 +164,7 @@ export const GET = withAuth(async (request, session) => {
 
 ## API Reference
 
-### Server Functions (`transactional-auth-next/server`)
+### Server Functions (`@usetransactional/auth-next/server`)
 
 #### `getSession()`
 
@@ -207,7 +207,7 @@ const authenticated = await isAuthenticated();
 - `handleLogout(options?)` - Logs out user
 - `handleSession()` - Returns current session as JSON
 
-### Client Functions (`transactional-auth-next/client`)
+### Client Functions (`@usetransactional/auth-next/client`)
 
 #### `TransactionalAuthProvider`
 
@@ -235,7 +235,7 @@ Hook for just user data.
 const { user, isLoading } = useUser();
 ```
 
-### Middleware (`transactional-auth-next/middleware`)
+### Middleware (`@usetransactional/auth-next/middleware`)
 
 #### `createAuthMiddleware(config)`
 
@@ -275,7 +275,7 @@ export const GET = withAuth(async (request, session) => {
 ### Programmatic Configuration
 
 ```ts
-import { initTransactionalAuth } from 'transactional-auth-next';
+import { initTransactionalAuth } from '@usetransactional/auth-next';
 
 initTransactionalAuth({
   domain: 'auth.usetransactional.com',
@@ -304,7 +304,7 @@ import type {
   Session,
   LoginOptions,
   LogoutOptions,
-} from 'transactional-auth-next';
+} from '@usetransactional/auth-next';
 ```
 
 ## License
