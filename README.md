@@ -1,5 +1,8 @@
 # @usetransactional/auth-next
 
+[![npm version](https://badge.fury.io/js/%40usetransactional%2Fauth-next.svg)](https://www.npmjs.com/package/@usetransactional/auth-next)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Next.js SDK for Transactional Auth - OpenID Connect authentication with full support for App Router, Server Components, and Middleware.
 
 ## Installation

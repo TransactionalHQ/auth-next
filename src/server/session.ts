@@ -14,7 +14,7 @@ import type { Session, TransactionalAuthUser } from '../types';
  * @example
  * ```tsx
  * // app/page.tsx (Server Component)
- * import { getSession } from 'transactional-auth-next/server';
+ * import { getSession } from '@usetransactional/auth-next/server';
  *
  * export default async function Page() {
  *   const session = await getSession();

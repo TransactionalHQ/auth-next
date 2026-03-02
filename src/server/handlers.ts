@@ -45,7 +45,7 @@ async function generatePKCE(): Promise<{ verifier: string; challenge: string }> 
  * @example
  * ```ts
  * // app/api/auth/login/route.ts
- * import { handleLogin } from 'transactional-auth-next/server';
+ * import { handleLogin } from '@usetransactional/auth-next/server';
  *
  * export const GET = handleLogin;
  * ```
@@ -107,7 +107,7 @@ export function handleLogin(options?: LoginOptions) {
  * @example
  * ```ts
  * // app/api/auth/callback/route.ts
- * import { handleCallback } from 'transactional-auth-next/server';
+ * import { handleCallback } from '@usetransactional/auth-next/server';
  *
  * export const GET = handleCallback;
  * ```
@@ -215,7 +215,7 @@ export function handleCallback() {
  * @example
  * ```ts
  * // app/api/auth/logout/route.ts
- * import { handleLogout } from 'transactional-auth-next/server';
+ * import { handleLogout } from '@usetransactional/auth-next/server';
  *
  * export const GET = handleLogout;
  * ```
@@ -264,7 +264,7 @@ export function handleLogout(options?: LogoutOptions) {
  * @example
  * ```ts
  * // app/api/auth/session/route.ts
- * import { handleSession } from 'transactional-auth-next/server';
+ * import { handleSession } from '@usetransactional/auth-next/server';
  *
  * export const GET = handleSession;
  * ```

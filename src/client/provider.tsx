@@ -30,7 +30,7 @@ export interface TransactionalAuthProviderProps {
  * @example
  * ```tsx
  * // app/layout.tsx
- * import { TransactionalAuthProvider } from 'transactional-auth-next/client';
+ * import { TransactionalAuthProvider } from '@usetransactional/auth-next/client';
  *
  * export default function RootLayout({ children }) {
  *   return (
@@ -111,7 +111,7 @@ export function TransactionalAuthProvider({
  * @example
  * ```tsx
  * 'use client';
- * import { useAuth } from 'transactional-auth-next/client';
+ * import { useAuth } from '@usetransactional/auth-next/client';
  *
  * export function LoginButton() {
  *   const { user, isLoading, login, logout } = useAuth();

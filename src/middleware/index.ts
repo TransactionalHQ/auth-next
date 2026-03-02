@@ -24,7 +24,7 @@ export interface AuthMiddlewareConfig {
  * @example
  * ```ts
  * // middleware.ts
- * import { createAuthMiddleware } from 'transactional-auth-next/middleware';
+ * import { createAuthMiddleware } from '@usetransactional/auth-next/middleware';
  *
  * export default createAuthMiddleware({
  *   protectedPaths: ['/dashboard/*', '/settings/*'],
@@ -134,7 +134,7 @@ async function handleUnauthorized(
  * @example
  * ```ts
  * // app/api/protected/route.ts
- * import { withAuth } from 'transactional-auth-next/middleware';
+ * import { withAuth } from '@usetransactional/auth-next/middleware';
  *
  * export const GET = withAuth(async (request, session) => {
  *   return Response.json({ user: session.user });
