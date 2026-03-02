@@ -310,6 +310,10 @@ import type {
 } from '@usetransactional/auth-next';
 ```
 
+## Documentation
+
+Full documentation is available at [usetransactional.com/docs/auth](https://usetransactional.com/docs/auth)
+
 ## License
 
 MIT
