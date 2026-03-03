@@ -312,7 +312,7 @@ import type {
 
 ## Documentation
 
-Full documentation is available at [usetransactional.com/docs/auth](https://usetransactional.com/docs/auth)
+Full documentation is available at [usetransactional.com/docs/sdks/auth/next](https://usetransactional.com/docs/sdks/auth/next)
 
 ## License
 
